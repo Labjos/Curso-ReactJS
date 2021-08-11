@@ -1,9 +1,9 @@
 #menuPrincipal  {
     width: 300px;
     height: 100%;
-    background-color: rgba(252, 195, 7, 0.3);
-    margin-top: 30px;
-    margin-right: 30px;
+    background-color: rgba(12, 119, 241, 0.3);
+	margin-top: 10px;
+   margin-left: 900px;
 }
 #menuPrincipal ul {
 	margin: 0px;
@@ -28,4 +28,10 @@
 }
 #menuPrincipal ul li a:hover {
 	color: #f7e704;
+}
+#logoBlack {
+	width: 265px;
+	height: 35px;
+	background-image: url(../../imagenes/logoblackredTipo.png);
+	margin-left: 920px;
 }

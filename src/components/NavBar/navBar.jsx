@@ -1,18 +1,24 @@
 import React from "react"
+import { CartWidget } from "../cartWidget/cartWidget"
 import'./navBar.css'
 
 export const NavBar =() => {
 
   return (
+
+   
     <div className="navBar">
+
+<CartWidget />
+
+      <div id="logoBlack"></div>
             <nav id="menuPrincipal">
                     <ul>
-                        <li>Inicio</li>
+                        <li>Barra</li>
                         <li>Productos</li>
-                        <li>Categorias</li>
-                        <li>Compra</li>
-                        <li>Carga</li>
-                        <li>Detalles</li>
+                        <li>Categorías</li>
+                        <li>Ofertas</li>
+                        <li>Lo + Vendido</li>
                         <li>Contacto</li>
                     </ul>
             </nav>
