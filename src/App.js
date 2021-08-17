@@ -1,8 +1,8 @@
 import logo from './logoBR.png';
 import './App.css';
-import { NavBar } from './components/NavBar/navBar'
-import { Fondo } from './components/fondo/fondo'
-import ItemListContainer from './components/itemListContainer/itemListContainer'
+import { NavBar } from './components/NavBar/NavBar'
+import { Fondo } from './components/Fondo/Fondo'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 
 
 
@@ -16,13 +16,15 @@ function App() {
 
     <Fondo/>
       <NavBar />
+      
+
       <ItemListContainer
        greetings="Pruebame!"
        img="../../imagenes/nero.JPG" />  
 
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-         Bienvenido a Black#53Red <br/>el SpeackEasy Global !!!</p>
+      Bienvenido a Black#53Red <br/>el SpeackEasy Global !!!</p>
    
     </header>
    </div>

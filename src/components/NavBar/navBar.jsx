@@ -1,5 +1,5 @@
 import React from "react"
-import { CartWidget } from "../cartWidget/cartWidget"
+import { CartWidget } from "../CartWidget/CartWidget"
 import'./navBar.css'
 
 export const NavBar =() => {

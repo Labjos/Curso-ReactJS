@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card, Image } from 'semantic-ui-react'
 import productos from '../../imagenes/nero.JPG'
+import { ItemCount } from '../ItemCount/ItemCount'
 
 const ItemListContainer = ({greetings, img}) => (
   <Card>
@@ -12,6 +13,8 @@ const ItemListContainer = ({greetings, img}) => (
         Fernet Premium
       </Card.Description>
     </Card.Content>
+
+    <ItemCount />
  
   </Card>
 )
