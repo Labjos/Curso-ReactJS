@@ -3,37 +3,41 @@ import '../ItemCount/ItemCount.css'
 import productos from '../../imagenes/nero.JPG'
 
 
-export const ItemCount = ({initial = 5, stock = 5, onAdd}) => { 
+export const ItemCount = ({initial = 5, stock, onAdd}) => { 
  
     const [contador, setContador] = useState (initial)
     const [newStock, setNewStock] = useState(stock)
         
     const restar = () => {
-        if (contador > 1) {
+        if (contador > 0) {
             setContador (contador -1)
+            setNewStock (newStock + 1)
         }
     }
     const sumar = () => {
-        if (contador > 1) {
+        if (newStock !== 0) {
             setContador (contador +1)
-                       
+            setNewStock (newStock - 1)
         }
     }
     const handleAdd = () => {
+        console.log(stock, contador)
 
       if (newStock > 0) {
        this.setState({contador: this.useState.counter + 1})
        setNewStock(newStock - contador)
        handleAdd(contador)
+ 
        }
     }
 
          
     return (
-        <div>
-            <p>Counter:{contador}</p>
+           <div>
+               <p>Counter:${contador}</p>
+            
               
-        <div class="card">
+        <div className="card">
                 <h3>Nero 53</h3>
                 <p id="id">ID:002</p>
                 <img id="imagenCard" src={productos} alt="Imagen del Producto" />         

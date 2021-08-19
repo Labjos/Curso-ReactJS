@@ -2,6 +2,7 @@ import React from 'react'
 import { Card, Image } from 'semantic-ui-react'
 import productos from '../../imagenes/nero.JPG'
 import { ItemCount } from '../ItemCount/ItemCount'
+import '../ItemListContainer/ItemListContainer.css'
 
 const ItemListContainer = ({greetings, img}) => (
   <Card>
@@ -14,7 +15,7 @@ const ItemListContainer = ({greetings, img}) => (
       </Card.Description>
     </Card.Content>
 
-    <ItemCount />
+    <ItemCount inicial={1} stock={5} onAdd={"nada"} />
  
   </Card>
 )
