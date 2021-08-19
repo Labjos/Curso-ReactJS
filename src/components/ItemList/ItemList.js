@@ -1,39 +1,16 @@
-import { Item } from '../item/item'
+import { Item } from '../item/Item'
 
+export const ItemList = ({items}) => {
 
-
-export const ItemList = ({items}) => (
+  return (
 
     <div>
 
-          {items.map((item) => (
+          {items.map(item => (
             <Item  key={item.id} item={item} />
           ))}
 
     </div>
 )
+}
 
-
-/*import React from 'react'
-import'./itemListContainer.css'
-import ItemList from '../itemListContainer/itemList'
-
-const AgragarCarrito = (items) => {
-  alert(`Agregaste ${items} al carrito`)
-
-  {
-              id: 1,
-              nombrePlato: 'a',
-              description: '',
-              precio: 1,
-              imagenUrl: ''
-          }
-        ]
-    }
-        return (
-      <div>
-        <ItemList items={items} />
-      </div>
-    )
-  }     
-*/

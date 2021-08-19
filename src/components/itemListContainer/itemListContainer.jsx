@@ -1,23 +1,56 @@
 import React from 'react'
-import { Card, Image } from 'semantic-ui-react'
-import productos from '../../imagenes/nero.JPG'
-import { ItemCount } from '../ItemCount/ItemCount'
 import '../ItemListContainer/ItemListContainer.css'
+import { useState, useEffect } from 'react'
 
-const ItemListContainer = ({greetings, img}) => (
-  <Card>
-    <Image src={productos} wrapped ui={false} />
-    <Card.Content>
-      <Card.Header>NERO 53</Card.Header>
-      <Card.Meta>{greetings}</Card.Meta>
-      <Card.Description>
-        Fernet Premium
-      </Card.Description>
-    </Card.Content>
 
-    <ItemCount inicial={1} stock={5} onAdd={"nada"} />
- 
-  </Card>
+export const ItemListContainer = () => {
+
+const [catalogo, setCatalogo] = useState([])
+const prod = [{
+
+      "nombre":"Fernet",
+      "marca": "Nero53",
+      "precio": 620,
+      "imagen": "../imagenes/nero.JPG",
+      "stock": 10,
+      "id": 1
+    },
+    {
+     "nombre":"Gin",
+     "marca": "Myrica",
+     "precio": 1250,
+     "imagen": "../imagenes/myrica.jpeg",
+     "stock": 10,
+     "id": 2
+    },
+    {
+     "nombre":"Cerveza",
+     "marca": "Kraken",
+     "precio": 280,
+     "imagen": "../imagenes/cerveza.jpeg",
+     "stock": 10,
+     "id": 3
+   }
+ ]
+
+useEffect(() => {
+
+  const nuevaPromesa = new Promise((res, rej) => {
+    setTimeout(() =>{
+      res(prod)
+    }, 2000)
+  }) 
+  
+  nuevaPromesa.then((res)=> {
+    console.log(res)
+    setCatalogo(res)
+  })
+
+},[])
+
+return(
+  <>
+      <itemList item={catalogo}/> 
+  </>
 )
-
-export default ItemListContainer
+}

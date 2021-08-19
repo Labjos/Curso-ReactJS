@@ -3,7 +3,7 @@ import '../ItemCount/ItemCount.css'
 import productos from '../../imagenes/nero.JPG'
 
 
-export const ItemCount = ({initial = 5, stock, onAdd}) => { 
+export const ItemCount = ({initial = 0 , stock, onAdd}) => { 
  
     const [contador, setContador] = useState (initial)
     const [newStock, setNewStock] = useState(stock)
